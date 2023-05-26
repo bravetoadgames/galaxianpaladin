@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://digdwk6dhrs2t"]
+
+[ext_resource type="Texture2D" uid="uid://dj8cw2pkvbui0" path="res://Backgrounds/starfield.png" id="1_htdy1"]
+[ext_resource type="Script" path="res://Scripts/Starfield.gd" id="2_4n7r8"]
+
+[node name="Starfield" type="Sprite2D"]
+texture_repeat = 2
+texture = ExtResource("1_htdy1")
+centered = false
+region_enabled = true
+region_rect = Rect2(0, 0, 4320, 1080)
+script = ExtResource("2_4n7r8")

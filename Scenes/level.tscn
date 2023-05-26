@@ -1,0 +1,32 @@
+[gd_scene load_steps=9 format=3 uid="uid://dcju842sjcmmd"]
+
+[ext_resource type="Script" path="res://Scripts/allframes.gd" id="1_bbgpa"]
+[ext_resource type="PackedScene" uid="uid://digdwk6dhrs2t" path="res://Scenes/starfield.tscn" id="1_sybq1"]
+[ext_resource type="PackedScene" uid="uid://b51qmaks1kbur" path="res://Scenes/player.tscn" id="3_nfnww"]
+[ext_resource type="Script" path="res://Scripts/player.gd" id="4_tru8v"]
+[ext_resource type="PackedScene" uid="uid://bdxwg7udvy3iq" path="res://Scenes/bullet.tscn" id="4_vi5fw"]
+[ext_resource type="PackedScene" uid="uid://ck8h0bgu8w3ko" path="res://Scenes/hud.tscn" id="6_jlu84"]
+[ext_resource type="PackedScene" uid="uid://dqx7d0g1useoi" path="res://Scenes/enemy_01.tscn" id="7_bmjt2"]
+[ext_resource type="Script" path="res://Scripts/enemy_01.gd" id="8_ypm0v"]
+
+[node name="level" type="Node2D"]
+script = ExtResource("1_bbgpa")
+
+[node name="Starfield" parent="." instance=ExtResource("1_sybq1")]
+texture_filter = 1
+
+[node name="Player" parent="." instance=ExtResource("3_nfnww")]
+z_index = 1
+position = Vector2(110, 540)
+script = ExtResource("4_tru8v")
+
+[node name="bullet" parent="Player" instance=ExtResource("4_vi5fw")]
+position = Vector2(-57, -949)
+scale = Vector2(3, 3)
+script = null
+
+[node name="HUD" parent="." instance=ExtResource("6_jlu84")]
+
+[node name="Enemy01" parent="." instance=ExtResource("7_bmjt2")]
+position = Vector2(1048, 431)
+script = ExtResource("8_ypm0v")

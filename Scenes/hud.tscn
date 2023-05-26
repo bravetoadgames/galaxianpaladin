@@ -1,0 +1,39 @@
+[gd_scene load_steps=4 format=3 uid="uid://ck8h0bgu8w3ko"]
+
+[ext_resource type="FontFile" uid="uid://blrvkb8bjh6um" path="res://Fonts/PixelTactical-AWOx.ttf" id="1_lqjxs"]
+[ext_resource type="Script" path="res://Scripts/Score.gd" id="2_7yibs"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_jyeja"]
+font = ExtResource("1_lqjxs")
+font_size = 40
+font_color = Color(0.670588, 0.670588, 0.670588, 1)
+outline_size = 7
+outline_color = Color(0, 0, 0, 1)
+shadow_size = 3
+shadow_offset = Vector2(2, 2)
+
+[node name="HUD" type="CanvasLayer"]
+layer = 128
+
+[node name="Score" type="Label" parent="."]
+offset_left = 26.0
+offset_right = 223.0
+offset_bottom = 100.0
+text = "SCORE:"
+label_settings = SubResource("LabelSettings_jyeja")
+horizontal_alignment = 1
+vertical_alignment = 1
+uppercase = true
+max_lines_visible = 1
+script = ExtResource("2_7yibs")
+
+[node name="Value" type="Label" parent="Score"]
+layout_mode = 0
+offset_left = 185.0
+offset_right = 317.0
+offset_bottom = 100.0
+text = "0"
+label_settings = SubResource("LabelSettings_jyeja")
+vertical_alignment = 1
+uppercase = true
+max_lines_visible = 1
