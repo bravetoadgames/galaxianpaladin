@@ -4,7 +4,7 @@
 [ext_resource type="AudioStream" uid="uid://bse3qujj3f7wj" path="res://Sounds/shootBullet.wav" id="2_cpgwg"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_p5ygv"]
-size = Vector2(81, 36)
+size = Vector2(105, 36)
 
 [sub_resource type="Animation" id="Animation_p5jyr"]
 length = 0.001

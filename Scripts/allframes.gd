@@ -12,7 +12,7 @@ func _ready():
 # ----------------------------------
 # Use ESC key to quit program
 # ----------------------------------
-func _process(delta):
+func _process(_delta):
 	#$HUD.get_canvas(Label).text("Score:"+str(score))
 	if Input.is_key_pressed(KEY_ESCAPE):
 		get_tree().quit()
