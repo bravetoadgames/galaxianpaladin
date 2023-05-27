@@ -1,6 +1,9 @@
 extends StaticBody2D
 
-@export var speed = 1000
+@export var speed = 900
+
+func _ready():
+	$AnimationPlayer.play("bulletAnim")
 
 func _physics_process(delta):
 	position.x+=speed*delta
